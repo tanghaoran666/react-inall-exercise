@@ -1,0 +1,9 @@
+.timerBackground{
+    background-color: gainsboro;
+}
+
+.timeWindow{
+    border: 2px solid black;
+width: 400px;
+padding: 50px;
+}
