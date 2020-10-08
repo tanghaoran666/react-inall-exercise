@@ -4,6 +4,7 @@ import {Route, BrowserRouter, Switch} from "react-router-dom";
 import Home from "./Home";
 import Header from '../components/Header';
 import Timer from '../components/Timer';
+import Calculator from '../components/Calculator';
 
 class App extends Component {
   render() {
@@ -14,7 +15,7 @@ class App extends Component {
         <Switch>
           <Route exact path='/' component={Home}/>
           <Route exact path='/timer' component={Timer}/>
-          <Route exact path='/calculator' component={Home}/>
+          <Route exact path='/calculator' component={Calculator}/>
           </Switch>
         </BrowserRouter>
       </div>
