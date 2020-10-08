@@ -4,6 +4,20 @@
 
 .timeWindow{
     border: 2px solid black;
-width: 400px;
-padding: 50px;
+    width: 400px;
+    padding: 50px;
+    display: inline-block;
+}
+
+.timerPad{
+    display: inline-block;
+}
+
+.start{
+    display: block;
+    background-color: skyblue;
+    width: 100%;
+    padding: 10px;
+    color: white;
+    margin: 10px 0;
 }

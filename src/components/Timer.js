@@ -3,28 +3,58 @@ import { NavLink} from 'react-router-dom';
 import './Timer.css';
 
 class Timer extends React.Component{
-    state(){
-        time:0
+    state={
+        time:0,
+        start: false,
+        end: false
     }
-
+  
+    
     handleChange= (event) => {
         event.preventDefault();
         this.setState(
-          {[event.target.name] : event.target.value}
+          {time: event.target.value}
           )
       }
+    reduce=() => {
+        this.setState({
+            time: this.state.time-1,
+        })
+    }
+    
+    timerStart = () => {
+        const timer = setInterval(() => {
+            if(this.state.time<=1){
+                this.setState({
+                    end:true
+                })
+            }else{
+            this.setState({
+                time: this.state.time -1
+            })}
+        },1000)
 
-   
+        this.setState({
+            start: true,
+            timer
+        })
+    }
+
     render(){
         return <div className='timerBackground'>
             <h2>在线倒计时器</h2>
-            <div>
+            <div className="timerPad">
                 设置时间 <input type="text" name="time" onChange={this.handleChange} className='input' />
-                <button className='start' >Start</button>
+                <button className='start' onClick={this.timerStart} >Start</button>
             </div>
 
             <div className='timeWindow'>
-                {this.state.time} Seconds
+                {
+                    this.state.start?
+                    this.state.end?
+                    "End":`${this.state.time} Seconds`
+                    :"Start"
+                }
             </div>
 
         
