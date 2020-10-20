@@ -1,23 +1,39 @@
-.timerBackground{
-    background-color: gainsboro;
+.timerBackground {
+  background-color: gainsboro;
 }
 
-.timeWindow{
-    border: 2px solid black;
-    width: 400px;
-    padding: 50px;
-    display: inline-block;
+.timer-title {
+  margin-top: 0;
+  padding: 50px;
+}
+.timeWindow {
+  border: 2px solid black;
+  width: 400px;
+  display: inline-block;
+  padding: 10px 0px;
+  display: inline-block;
+  margin-left: 70px;
+  font-size: 60px;
 }
 
-.timerPad{
-    display: inline-block;
+.timerPad {
+  display: inline-block;
+  font-size: 22px;
 }
 
-.start{
-    display: block;
-    background-color: skyblue;
-    width: 100%;
-    padding: 10px;
-    color: white;
-    margin: 10px 0;
+.timerPad-up {
+  margin-bottom: 10px;
+}
+.start {
+  display: block;
+  background-color: skyblue;
+  width: 100%;
+  padding: 10px;
+  color: white;
+  margin: 10px 0;
+}
+
+.input {
+  height: 30px;
+  margin-left: 10px;
 }
